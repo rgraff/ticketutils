@@ -1,0 +1,32 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://charts.services.ticketutils.com:80/<%= auth_token %>/Charts/OfVenue/6c307dea-2057-488b-9200-97c2c756c576
+    body: 
+    headers: 
+      content-type: 
+      - application/json
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - ASP.NET
+      x-aspnet-version: 
+      - 4.0.30319
+      content-type: 
+      - application/json; charset=utf-8
+      server: 
+      - Microsoft-IIS/7.5
+      date: 
+      - Thu, 26 May 2011 17:11:25 GMT
+      content-length: 
+      - "456"
+      x-aspnetmvc-version: 
+      - "3.0"
+      cache-control: 
+      - private
+    body: "{\"Charts\":[{\"SeatingChartId\":\"87fae816-53c6-4fca-8549-044568191197\",\"VenueId\":\"6c307dea-2057-488b-9200-97c2c756c576\",\"Name\":\"Main Map\",\"Url500px\":\"http://images2.ticketutils.com/500X/87fae816-53c6-4fca-8549-044568191197.jpg\",\"Url\":\"http://images2.ticketutils.com/1000X/87fae816-53c6-4fca-8549-044568191197.jpg\",\"Url2000px\":null,\"HighlightedChartUrl\":null,\"Status\":1}],\"Pagination\":{\"TotalResults\":1,\"TotalPages\":0,\"CurrentPage\":1},\"Status\":0,\"Errors\":null}"
+    http_version: "1.1"

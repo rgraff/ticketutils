@@ -1,0 +1,32 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://charts.services.ticketutils.com:80/<%= auth_token %>/Charts?itemsPerPage=100&page=1
+    body: 
+    headers: 
+      content-type: 
+      - application/json
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-powered-by: 
+      - ASP.NET
+      x-aspnet-version: 
+      - 4.0.30319
+      content-type: 
+      - application/json; charset=utf-8
+      date: 
+      - Thu, 26 May 2011 15:40:24 GMT
+      server: 
+      - Microsoft-IIS/7.5
+      content-length: 
+      - "128"
+      x-aspnetmvc-version: 
+      - "3.0"
+      cache-control: 
+      - private
+    body: "{\"Charts\":null,\"Pagination\":null,\"Status\":2,\"Errors\":[{\"ErrorCode\":1,\"ErrorDescription\":\"No Filters Specified in the Request\"}]}"
+    http_version: "1.1"
