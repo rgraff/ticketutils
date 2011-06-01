@@ -1,6 +1,6 @@
 module Ticketutils
   class SeatingChart < Base
-    attr_accessor :name, :id, :url, :url_medium, :url_large, :status, :venue_id
+    attr_accessor :name, :id, :url, :url_medium, :url_large, :status, :venue_id, :version
 
     # Ticketutils.seating_charts(options) => returns a will_paginate collection of seating charts
     # options:
@@ -38,6 +38,7 @@ module Ticketutils
           :name => chart["Name"],
           :venue_id => chart["VenueId"],
           :status => chart["Status"],
+          :version => chart["Version"],
           :url => chart["Url"],
           :url_medium => chart["Url500px"],
           :url_large => chart["Url2000px"]
@@ -60,6 +61,7 @@ module Ticketutils
       @url = options[:url]
       @venue_id = options[:venue_id]
       @status = options[:status]
+      @version = options[:version]
       @url_medium = options[:url_medium]
       @url_large = options[:url_large]
     end

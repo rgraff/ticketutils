@@ -31,7 +31,7 @@ describe Ticketutils::SeatingChart do
       end
 
       it "contains 160 total results" do
-        seating_charts.total_entries.should == 160
+        seating_charts.total_entries.should == 218
       end
 
       it "is on the first page of results" do
@@ -39,7 +39,7 @@ describe Ticketutils::SeatingChart do
       end
 
       it "contains 20 page of results" do
-        seating_charts.total_pages.should == 2
+        seating_charts.total_pages.should == 3
       end
     end
     

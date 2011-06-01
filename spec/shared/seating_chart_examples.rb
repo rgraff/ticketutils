@@ -29,6 +29,7 @@ shared_examples_for "seating charts" do
     seating_chart.url_large.should == nil
     seating_chart.venue_id.should == venue_id
     seating_chart.status.should == 1
+    seating_chart.version.should == 1
   end
 end
 
@@ -42,10 +43,11 @@ shared_examples_for "seatingchart.find with results" do
   it "parses the results into seating charts" do
     seating_chart.id.should == "3cd7427c-dabc-4a5e-b26c-016863684549"
     seating_chart.name.should == "General Admission"
-    seating_chart.url.should == "http://images2.ticketutils.com/NotInSandbox.jpg"
+    seating_chart.url.should == "http://images2.ticketutils.com/1000X/3cd7427c-dabc-4a5e-b26c-016863684549.jpg"
     seating_chart.venue_id.should == "7b1d2d7d-c270-47c7-bf5f-262057c77fc1"
     seating_chart.status.should == 1
-    seating_chart.url_medium.should == "http://images2.ticketutils.com/NotInSandbox.jpg"
-    seating_chart.url_large.should == "http://images2.ticketutils.com/NotInSandbox.jpg"
+    seating_chart.version.should == 1
+    seating_chart.url_medium.should == "http://images2.ticketutils.com/500X/3cd7427c-dabc-4a5e-b26c-016863684549.jpg"
+    seating_chart.url_large.should == "http://images2.ticketutils.com/2000X/3cd7427c-dabc-4a5e-b26c-016863684549.jpg"
   end
 end
