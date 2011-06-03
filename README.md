@@ -18,15 +18,15 @@
 
 ### Venue object
 
-  venue.seating_charts => returns will_paginate collection of all searching charts    
+    venue.seating_charts => returns will_paginate collection of all searching charts    
 
 ### List out Seating Charts
 
-  Ticketutils.seating_charts(options) => returns a will_paginate collection of seating charts
-  # options:
-  #   page: defaults to 1
-  #     First page is 1, 100 results to the page
-  #   updated: defaults to nil
-  #     Only show venues updated since this date. Defaults to all venues
-  #   per_page: defaults to 100
-  #     Paginate this many per page. Limit is 100.
+    Ticketutils.seating_charts(options) => returns a will_paginate collection of seating charts
+    # options:
+    #   page: defaults to 1
+    #     First page is 1, 100 results to the page
+    #   updated: defaults to nil
+    #     Only show venues updated since this date. Defaults to all venues
+    #   per_page: defaults to 100
+    #     Paginate this many per page. Limit is 100.
