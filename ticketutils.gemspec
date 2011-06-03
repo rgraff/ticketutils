@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ticketutils}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Adam Fortuna"]
-  s.date = %q{2011-05-26}
+  s.date = %q{2011-06-03}
   s.description = %q{TicketUtils.com client for using thier API}
   s.email = %q{adam@envylabs.com}
   s.extra_rdoc_files = [
@@ -40,9 +40,10 @@ Gem::Specification.new do |s|
     "spec/shared/venue_examples.rb",
     "spec/spec_helper.rb",
     "spec/ticketutils/seating_chart_spec.rb",
-    "spec/ticketutils/venue_spec.rb"
+    "spec/ticketutils/venue_spec.rb",
+    "ticketutils.gemspec"
   ]
-  s.homepage = %q{http://github.com/ticketevolution/ticketutils}
+  s.homepage = %q{http://github.com/adamfortuna/ticketutils}
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.6.2}
   s.summary = %q{TicketUtils.com client using their API}
