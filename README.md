@@ -18,15 +18,6 @@
 
 ### Venue object
 
-  venue.events(options) => returns a will_paginate collection of events_
-  # options:
-  #   page: defaults to 1
-  #     First page is 1, 100 results to the page
-  #   on: defaults to nil
-  #     Only show events on this specific date. (all other options will be ignored)
-  #   updated: defaults to nil
-  #     Only show venues updated since this date. Defaults to all venues. (cannot be)
-
   venue.seating_charts => returns will_paginate collection of all searching charts    
 
 ### List out Seating Charts
