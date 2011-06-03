@@ -4,6 +4,7 @@
 
 ### Set your auth key
 
+    # Usually in an initializer, or wherever you want as long as it's before any calls are made.
     Ticketutils.auth_key = "1234567890123456789"
 
 ### List out Venues
