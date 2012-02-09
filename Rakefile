@@ -7,9 +7,9 @@ begin
     gem.name = "ticketutils"
     gem.summary = %Q{TicketUtils.com client using their API}
     gem.description = %Q{TicketUtils.com client for using thier API}
-    gem.email = "adam@envylabs.com"
-    gem.homepage = "http://github.com/adamfortuna/ticketutils"
-    gem.authors = ["Adam Fortuna"]
+    gem.email = "spike@ticketevolution.com"
+    gem.homepage = "http://github.com/ticketevolution/ticketutils"
+    gem.authors = ["Spike Grobstein", "Adam Fortuna"]
 
     gem.add_development_dependency 'rspec'
     gem.add_development_dependency 'vcr', '~> 1.10'
