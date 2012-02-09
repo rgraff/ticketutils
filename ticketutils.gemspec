@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{ticketutils}
+  s.name = "ticketutils"
   s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Adam Fortuna", "Spike Grobstein"]
-  s.date = %q{2012-01-09}
-  s.description = %q{TicketUtils.com client for using thier API}
-  s.email = %q{adam@envylabs.com spike@ticketevolution.com}
+  s.authors = ["Spike Grobstein", "Adam Fortuna"]
+  s.date = "2012-02-09"
+  s.description = "TicketUtils.com client for using thier API"
+  s.email = "spike@ticketevolution.com"
   s.extra_rdoc_files = [
     "LICENSE",
     "README.md"
@@ -43,10 +43,10 @@ Gem::Specification.new do |s|
     "spec/ticketutils/venue_spec.rb",
     "ticketutils.gemspec"
   ]
-  s.homepage = %q{http://github.com/adamfortuna/ticketutils}
+  s.homepage = "http://github.com/ticketevolution/ticketutils"
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
-  s.summary = %q{TicketUtils.com client using their API}
+  s.rubygems_version = "1.8.15"
+  s.summary = "TicketUtils.com client using their API"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
