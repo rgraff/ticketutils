@@ -7,6 +7,10 @@
     # Usually in an initializer, or wherever you want as long as it's before any calls are made.
     Ticketutils.auth_key = "1234567890123456789"
 
+### Set your secret
+
+    Ticketutils.secret = "qpvsuytohm7"
+
 ### List out Venues
 
     Ticketutils.venues(options) => returns a will_paginate collection of venues
