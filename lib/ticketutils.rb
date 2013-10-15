@@ -16,10 +16,18 @@ module Ticketutils
       @@auth_token = auth_token
     end
 
+    def secret
+      @@secret
+    end
+
+    def secret=(secret)
+      @@secret = secret
+    end
+
     def venues(options = {})
       Venue.find(options)
     end
-    
+
     def seating_charts(options = {})
       SeatingChart.find(options)
     end

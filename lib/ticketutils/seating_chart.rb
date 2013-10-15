@@ -13,16 +13,17 @@ module Ticketutils
     #   venue_id: Only tickets for a specific venue
     def self.find(options = {})
       results = if options[:venue_id]
-        get("/#{Ticketutils.auth_token}/Charts/OfVenue/#{options[:venue_id]}").parsed_response
+        to_sign = "/SeatingChart/Charts?VenueId=#{options[:venue_id]}"
       elsif options[:updated]
-        get("/#{Ticketutils.auth_token}/Charts/UpdatedSince/#{options[:updated].strftime("%Y%m%d%H%M")}/#{options[:page] || 1}").parsed_response
+        to_sign = "/SeatingChart/Charts?UpdatedSince=#{options[:updated].strftime("%Y%m%d%H%M")}&Page=#{options[:page] || 1}"
       else
         params = { :VenueId => options[:venue_id], 
                    :page => options[:page] || 1,
                    :itemsPerPage => options[:per_page] || 100,
-                   :updatedSince => options[:updated] }.collect { |k, v| "#{k}=#{v}" unless v.nil? }
-        get("/#{Ticketutils.auth_token}/Charts?#{params.join("&")}").parsed_response
+                   :updatedSince => options[:updated] }.reject{|k,v| v.nil?}.collect { |k, v| "#{k}=#{v}" }
+        to_sign = "/SeatingChart/Charts?#{params.join("&")}"
       end
+      results = signed_get(to_sign)
       return parse_response(results)
     end
 
@@ -32,7 +33,7 @@ module Ticketutils
       # return an array of venues
       pagination = response["Pagination"]
 
-      charts = response["Charts"].collect do |chart|
+      charts = response["Items"].collect do |chart|
         new(
           :id => chart["SeatingChartId"],
           :name => chart["Name"],
@@ -53,7 +54,7 @@ module Ticketutils
         pager.replace(charts)
       end
     end
-    
+
     private
     def initialize(options)
       @id = options[:id]
@@ -65,5 +66,6 @@ module Ticketutils
       @url_medium = options[:url_medium]
       @url_large = options[:url_large]
     end
+
   end
 end
